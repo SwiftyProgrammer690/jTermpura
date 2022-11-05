@@ -7,6 +7,7 @@ package jTermpura;
 
 public class JTermpura {
 	
+	// Customize the logo to your needs...
 	public final static String logo = ""
 			+ "███████████  ████                       █████     \r\n"
 			+ "░░███░░░░░███░░███                      ░░███      \r\n"
@@ -16,16 +17,20 @@ public class JTermpura {
 			+ " ░███    ░███ ░███  ███░░███  ░███ ░███  ░███░░███ \r\n"
 			+ " ███████████  █████░░████████ ████ █████ ████ █████\r\n"
 			+ "░░░░░░░░░░░  ░░░░░  ░░░░░░░░ ░░░░ ░░░░░ ░░░░ ░░░░░ ";
-	   // Declaring ANSI_RESET so that we can reset the color
-    public static final String ANSI_RESET = "\u001B[0m";
-  
-    // Declaring the color
-    // Custom declaration
-    public static final String ANSI_YELLOW = "\u001B[33m";
+
+	// TODO complete basics of main page
+	public static void mainPage() {
+		System.out.println(logo);
+		System.out.println("\n\n");
+	}
+	
+	// TODO complete 404 pages
+	public static void notFound404Error(String notFoundLogo) {
+		
+	}
 
 	public static void main(String[] args) {
-		System.out.println(ANSI_YELLOW + "Hi" + ANSI_RESET);
-
+		mainPage();
 	}
 
 }
