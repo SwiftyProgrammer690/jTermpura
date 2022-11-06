@@ -38,20 +38,20 @@ public class JTermpura {
 		System.out.println(logo);
 		System.out.println("\n\n");
 		System.out.println(description);
-	}
+	};
 	
 	// TODO complete 404 pages
 	public static void notFound404Error(String notFoundLogo) {
-		
-	}
+		System.out.println(notFoundLogo);
+	};
 	
 	// TODO comple 500 pages
 	public static void internalServer505Error(String internalServerErrLogo) {
-		
-	}
+		System.out.println(internalServerErrLogo);
+	};
 
 	public static void main(String[] args) {
 		mainPage();
-	}
+	};
 
 }
