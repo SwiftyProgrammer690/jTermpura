@@ -32,6 +32,10 @@ public class JTermpura {
 			+ " - Intuitive, dev-friendly environment (especially for those who are familiar with\r\n"
 			+ " frameworks like NextJS).\r\n"
 			+ " - and more! 🎉";
+	
+	public final static String options = "1. Example \r\n 2. Exit";
+	
+	public final static String option1OnTriggerDesc = "Ohhi! This text your are viewing is an example!";
 
 	// TODO complete basics of main page
 	public static void mainPage() {
@@ -45,10 +49,26 @@ public class JTermpura {
 		System.out.println(notFoundLogo);
 	};
 	
-	// TODO comple 500 pages
+	// TODO complete 500 pages
 	public static void internalServer505Error(String internalServerErrLogo) {
 		System.out.println(internalServerErrLogo);
 	};
+	
+	// TODO complete option inputs
+	public static void getOptionInput(String input) {	
+		int finalInput = Integer.parseInt(input);
+		
+		if (finalInput == 1) {
+			System.out.println(option1OnTriggerDesc);
+		} else if (finalInput == 2) {
+			System.out.println("Terminating your jTermpura Application...");
+			System.exit(0);
+		} else {
+			System.out.print("\033[H\033[2J");
+	        System.out.flush();
+	        mainPage();
+		}
+	}
 
 	public static void main(String[] args) {
 		mainPage();
