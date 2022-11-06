@@ -1,5 +1,7 @@
 package jTermpura;
 
+import java.util.Scanner;
+
 /**
  * @author swaritchoudhari
  *
@@ -37,6 +39,11 @@ public class JTermpura {
 	
 	public final static String option1OnTriggerDesc = "Ohhi! This text your are viewing is an example!";
 
+	public static void clearTerminal() {
+		System.out.print("\033[H\033[2J");
+        System.out.flush();
+	};
+	
 	// TODO complete basics of main page
 	public static void mainPage() {
 		System.out.println(logo);
@@ -55,7 +62,12 @@ public class JTermpura {
 	};
 	
 	// TODO complete option inputs
-	public static void getOptionInput(String input) {	
+	public static void getOptionInput() {
+		@SuppressWarnings("resource")
+		Scanner getInput = new Scanner(System.in);
+		System.out.println(" ");
+		String input = getInput.nextLine();
+		
 		int finalInput = Integer.parseInt(input);
 		
 		if (finalInput == 1) {
@@ -64,11 +76,9 @@ public class JTermpura {
 			System.out.println("Terminating your jTermpura Application...");
 			System.exit(0);
 		} else {
-			System.out.print("\033[H\033[2J");
-	        System.out.flush();
 	        mainPage();
 		}
-	}
+	};
 
 	public static void main(String[] args) {
 		mainPage();
